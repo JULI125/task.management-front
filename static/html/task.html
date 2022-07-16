@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/tarea.jpg">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Task management</title>
+</head>
+<body id="body-task" style="background: linear-gradient(to right, #B06AB3, #4568DC);">
+    <center><img src="../img/tarea.jpg" class="imagen"></center>
+    <form id="form-task" method="POST" enctype="multipart/form-data">
+        <style>
+            #image{
+                width: 200px;
+                height: 200px;
+            }
+            #image img{
+                width: 100%;
+            }
+        </style>
+        <div class="form-task-html mb-3">
+            <label for="floatingInput" style="margin-top: 60px" ><strong>Task image</strong></label> <br>
+            <input type="file" class="form-control" id="image-task">
+        </div>
+        <br>
+        <div class="form-task-html mb-3">
+            <label for="floatingInput">Task name</label> <br>
+            <input type="text" class="form-control" id="task-name" placeholder="Task name">  
+        </div>
+        <br>
+        <div class="form-task-html mb-3">
+            <label for="floatingInput">Priority task</label> <br>
+            <input type="text" class="form-control" id="priority" placeholder="task the Priority">
+        </div>
+        <div class="form-task-html mb-3">
+            <label for="floatingInput">Expiration date</label> <br>
+            <input type="date" class="form-control" id="date" placeholder="task the Priority">
+        </div>
+        <input type="submit" class="btn btn-pink" value="Subir task" id="btn-save">
+        <br>
+        
+        <div class="modal-conteiner" id="modal_conteiner">
+        <table id="save">
+            <thead>
+                <tr><th colspan="5" style="background-color: white; border-radius: 5px;">Task</th></tr>
+                <tr>
+                    <th id="tarea-imagen">Task image</th>
+                    <th id="nombre-tarea">Task name</th>
+                    <th id="prioridad-tarea">Prioriry task</th>
+                    <th id="expiracion">Expiration date</th>
+                    <tr><td colspan="2"><button id="btnAgregar" class="btn">Add task</button></td></tr>
+                    <tr><td colspan="2"><button id="btnEditar" class="btn">Editar Task</button></td></tr>
+                </tr>
+            </thead>
+            <tbody id="watchTask">
+
+            </tbody>
+        </table>
+    </div>
+    <footer>
+    <li><a href="./chat.html">Chat</a></li>
+    </footer>
+    </form>
+    <script src="../scripts/scripts.js" type="module"></script>
+</body>
+</html>
